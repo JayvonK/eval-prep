@@ -12,7 +12,6 @@ import { useEffect, useState } from "react";
 // Pass child component value to parent component
 // Based off value, change color of rules (Uppercase, Number)
 
-
 export default function Home() {
 
   const pageContext = useAppContext();
