@@ -25,17 +25,17 @@ export default function Home() {
 
   const changePassword = (p: string) => {
     setPassword(p);
-      let count = 0;
-      let count2 = 0;
-      p.split('').forEach(char => {
-        if(char === char.toUpperCase() && !Number(char)){
-          count++;
-        }else if(Number(char)){
-          count2++
-        }
-      })
-      count > 0 ? setUppercase(true) : setUppercase(false);
-      count2 > 0 ? setNumber(true) : setNumber(false);
+    let count = 0;
+    let count2 = 0;
+    p.split('').forEach(char => {
+      if (char === char.toUpperCase() && !Number(char)) {
+        count++;
+      } else if (Number(char)) {
+        count2++
+      }
+    })
+    count > 0 ? setUppercase(true) : setUppercase(false);
+    count2 > 0 ? setNumber(true) : setNumber(false);
   }
 
   const handleGoToJacob = () => {
@@ -70,7 +70,7 @@ export default function Home() {
         <p>Password Must Contain: <span className={`${uppercase ? "text-blue-600" : "text-red-600"}`}>Uppercase</span> | <span className={`${number ? "text-blue-600" : "text-red-600"}`}>Number</span></p>
 
         {/* Regex */}
-        {/* <p>Password Must Contain: <span className={`${/[A-Z]/.test(password) ? "text-blue-600" : "text-red-600"}`}>Uppercase</span> | <span className={`${/[0-9]/.test(password) ? "text-blue-600" : "text-red-600"}`}>Number</span></p> */} 
+        {/* <p>Password Must Contain: <span className={`${/[A-Z]/.test(password) ? "text-blue-600" : "text-red-600"}`}>Uppercase</span> | <span className={`${/[0-9]/.test(password) ? "text-blue-600" : "text-red-600"}`}>Number</span></p> */}
       </div>
 
 
